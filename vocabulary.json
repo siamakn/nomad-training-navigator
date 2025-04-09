@@ -1,14 +1,41 @@
 {
   "topics": [
-    "GeneralNOMAD", "Publish", "Explore", "Analyze", "ELN",
-    "API", "OasisCustomization", "OasisInstallation", "OasisConficuration"
+    "GeneralNOMAD",
+    "Publish",
+    "Explore",
+    "Analyze",
+    "ELN",
+    "API",
+    "OasisCustomization",
+    "OasisInstallation",
+    "OasisConfiguration"
   ],
   "keywords": [
-    "login", "register", "Introduction", "UploadData", "CreateDataset", "GetDOI",
-    "ManageMembers", "SupportedFiles", "FilterMenu", "Widgets", "Dashboard",
-    "NORTH", "BuiltinSchema", "CustomYAMLSchema", "TabularParserYAML", "BaseSection",
-    "NeXusDataConverter", "WriteApp", "WriteExampleUpload", "WriteNormalizer",
-    "WriteParser", "WriteSchemaPackage", "DevelopPlugin", "InstallPlugin",
-    "InstallOasis", "ConfigureOasis"
+    "login",
+    "register",
+    "Introduction",
+    "UploadData",
+    "CreateDataset",
+    "GetDOI",
+    "ManageMembers",
+    "SupportedFiles",
+    "FilterMenu",
+    "Widgets",
+    "Dashboard",
+    "NORTH",
+    "BuiltinSchema",
+    "CustomYAMLSchema",
+    "TabularParserYAML",
+    "BaseSection",
+    "NeXusDataConverter",
+    "WriteApp",
+    "WriteExampleUpload",
+    "WriteNormalizer",
+    "WriteParser",
+    "WriteSchemaPackage",
+    "DevelopPlugin",
+    "InstallPlugin",
+    "InstallOasis",
+    "ConfigureOasis"
   ]
 }
