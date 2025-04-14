@@ -1,4 +1,24 @@
 {
+  "resource_types": [
+    "FAIRmat Tutorial",
+    "Documentation",
+    "Workshop"
+  ],
+  "resource_subtypes": [
+    "Part 1",
+    "Part 2",
+    "Part 3",
+    "Part 4",
+    "Tutorial",
+    "How-to",
+    "Explanation",
+    "Reference"
+  ],
+  "formats": [
+    "Video",
+    "Page",
+    "Notebook"
+  ],
   "topics": [
     "GeneralNOMAD",
     "Publish",
@@ -8,7 +28,7 @@
     "API",
     "OasisCustomization",
     "OasisInstallation",
-    "OasisConfiguration"
+    "OasisConficuration"
   ],
   "keywords": [
     "login",
