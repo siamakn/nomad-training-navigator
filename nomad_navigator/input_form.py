@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import os
+import uuid
 from nomad_navigator.models import Resource
 from nomad_navigator.data_loader import load_resources_from_csv, save_resources_to_csv
 
@@ -103,6 +104,7 @@ def input_form():
     if st.button("Submit"):
         if title and url:
             new_resource = Resource(
+                id=str(uuid.uuid4()),
                 resource_type=resource_type,
                 resource_subtype=resource_subtype,
                 format=format_val,

@@ -3,6 +3,7 @@ from typing import List
 
 @dataclass
 class Resource:
+    id: str
     resource_type: str
     resource_subtype: str
     format: str

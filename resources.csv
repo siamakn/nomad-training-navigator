@@ -1,1 +1,17 @@
-resource_type,resource_subtype,format,title,url,topics,keywords,status_tag,difficulty
+id,resource_type,resource_subtype,format,title,url,topics,keywords,status_tag,difficulty
+1,FAIRmat Tutorial,Part 1,Video,Sample Resource Title 1,https://example.com/resource_1,"GeneralNOMAD, Explore","login, register",up-to-date,basic usage
+4,FAIRmat Tutorial,Part 4,Video,Sample Resource Title 4,https://example.com/resource_4,"API, ELN","UploadData, CreateDataset",up-to-date,configuration level 1
+7,FAIRmat Tutorial,Part 3,Video,Sample Resource Title 7,https://example.com/resource_7,"GeneralNOMAD, Explore","login, register",up-to-date,customization level 1
+8,Documentation,Explanation,Page,Sample Resource Title 8,https://example.com/resource_8,"API, ELN","UploadData, CreateDataset",deprecated-but-still-useful,customization level 2
+9,Workshop/Hackathon,Other,Notebook,Sample Resource Title 9,https://example.com/resource_9,"GeneralNOMAD, Explore","login, register",fully-deprecated,configuration level 1
+10,FAIRmat Tutorial,Part 2,Video,Sample Resource Title 10,https://example.com/resource_10,"API, ELN","UploadData, CreateDataset",up-to-date,configuration level 2
+11,Documentation,Reference,Page,Sample Resource Title 11,https://example.com/resource_11,"GeneralNOMAD, Explore","login, register",deprecated-but-still-useful,basic usage
+12,Workshop/Hackathon,Other,Notebook,Sample Resource Title 12,https://example.com/resource_12,"API, ELN","UploadData, CreateDataset",fully-deprecated,customization level 1
+13,FAIRmat Tutorial,Part 1,Video,Sample Resource Title 13,https://example.com/resource_13,"GeneralNOMAD, Explore","login, register",up-to-date,customization level 2
+14,Documentation,How-to,Page,Sample Resource Title 14,https://example.com/resource_14,"API, ELN","UploadData, CreateDataset",deprecated-but-still-useful,configuration level 1
+15,Workshop/Hackathon,Other,Notebook,Sample Resource Title 15,https://example.com/resource_15,"GeneralNOMAD, Explore","login, register",fully-deprecated,configuration level 2
+16,FAIRmat Tutorial,Part 4,Video,Sample Resource Title 16,https://example.com/resource_16,"API, ELN","UploadData, CreateDataset",up-to-date,basic usage
+17,Documentation,Tutorial,Page,Sample Resource Title 17,https://example.com/resource_17,"GeneralNOMAD, Explore","login, register",deprecated-but-still-useful,customization level 1
+18,Workshop/Hackathon,Other,Notebook,Sample Resource Title 18,https://example.com/resource_18,"API, ELN","UploadData, CreateDataset",fully-deprecated,customization level 2
+19,FAIRmat Tutorial,Part 3,Video,Sample Resource Title 19,https://example.com/resource_19,"GeneralNOMAD, Explore","login, register",up-to-date,configuration level 1
+20,Documentation,Explanation,Page,Sample Resource Title 20,https://example.com/resource_20,"API, ELN","UploadData, CreateDataset",deprecated-but-still-useful,configuration level 2

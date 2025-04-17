@@ -1,37 +1,50 @@
 import pandas as pd
-from typing import List
 from nomad_navigator.models import Resource
 
-CSV_FILE = "resources.csv"
+def load_resources_from_csv(convert_lists=False):
+    try:
+        df = pd.read_csv("resources.csv")
+    except Exception:
+        return []
 
-def load_resources_from_csv(csv_path: str = CSV_FILE) -> List[Resource]:
-    df = pd.read_csv(csv_path)
+    if convert_lists:
+        def safe_list(val):
+            if pd.isna(val):
+                return []
+            try:
+                return [v.strip() for v in str(val).strip("[]").replace("'", "").split(",") if v.strip()]
+            except:
+                return []
+
+        for col in ["topics", "keywords"]:
+            if col in df.columns:
+                df[col] = df[col].apply(safe_list)
+
     return [
         Resource(
+            id=row["id"],
             resource_type=row["resource_type"],
             resource_subtype=row["resource_subtype"],
             format=row["format"],
             title=row["title"],
             url=row["url"],
-            topics=row["topics"].split(";"),
-            keywords=row["keywords"].split(";"),
+            topics=row["topics"],
+            keywords=row["keywords"],
             status_tag=row["status_tag"],
             difficulty=row["difficulty"]
-        ) for _, row in df.iterrows()
+        )
+        for _, row in df.iterrows()
     ]
 
-def save_resources_to_csv(resources: List[Resource], csv_path: str = CSV_FILE):
-    data = [
-        {
-            "resource_type": r.resource_type,
-            "resource_subtype": r.resource_subtype,
-            "format": r.format,
-            "title": r.title,
-            "url": r.url,
-            "topics": ";".join(r.topics),
-            "keywords": ";".join(r.keywords),
-            "status_tag": r.status_tag,
-            "difficulty": r.difficulty
-        } for r in resources
-    ]
-    pd.DataFrame(data).to_csv(csv_path, index=False)
+def save_resources_to_csv(resources, convert_lists=False):
+    df = pd.DataFrame([r.__dict__ for r in resources])
+
+    # Ensure proper structure even when DataFrame is empty
+    if df.empty:
+        df = pd.DataFrame(columns=["id", "resource_type", "resource_subtype", "format", "title", "url", "topics", "keywords", "status_tag", "difficulty"])
+    else:
+        df["topics"] = df["topics"].apply(lambda lst: ", ".join(lst) if isinstance(lst, list) else lst)
+        df["keywords"] = df["keywords"].apply(lambda lst: ", ".join(lst) if isinstance(lst, list) else lst)
+        df = df[["id", "resource_type", "resource_subtype", "format", "title", "url", "topics", "keywords", "status_tag", "difficulty"]]
+
+    df.to_csv("resources.csv", index=False)
